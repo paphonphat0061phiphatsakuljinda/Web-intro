@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลการสมัครเรียน - ระบบรับสมัครนักศึกษาใหม่ มจพ.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ==================== HEADER (ส่วนหัวเว็บไซต์) ==================== -->
+        <header>
+            <img src="images/logo_kmutnb-(6).png" alt="โลโก้ มจพ." height="151px">
+            <h1>รับสมัคร นักศึกษาใหม่ มจพ.</h1>
+
+            <div class="FITM">
+                <img src="images/unnamed.png" alt="โลโก้ FITM" height="98px">
+            </div>
+        </header>
+
+        <!-- ==================== NAVIGATION (เมนูนำทาง) ==================== -->
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="ขั้นตอนการสมัคร.html">ขั้นตอนการสมัคร</a>
+            <a href="ติดต่อ.html">ติดต่อ</a>
+        </nav>
+
+        <!-- ==================== MAIN CONTENT (ข้อมูลการสมัครเรียน) ==================== -->
+        <main class="main-content">
+            
+            <!-- STEPPER (แถบแสดงขั้นตอน - ขั้นที่ 4) -->
+            <div class="lod--">
+                <div class="stepper">
+                    <div class="step completed">
+                        <div class="label">ข้อมูลส่วนตัว</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step completed">
+                        <div class="label">ข้อมูลสถานศึกษาเดิม</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step completed">
+                        <div class="label">ข้อมูลผู้ปกครอง</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step active">
+                        <div class="label">ข้อมูลการสมัครเรียน</div>
+                        <div class="circle"><img src="images/LOGO-KMUTNB.png" alt="โลโก้ขั้นตอน" width="50"></div>
+                    </div>
+                    <div class="step">
+                        <div class="label">เช็คสถานะ</div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM CONTAINER (กรอบแบบฟอร์มเลือกคณะและสาขา) -->
+            <div class="form-container">
+                <h1>การสมัครเรียน มจพ.</h1>
+                <h2>กรอกข้อมูล การสมัครเรียน</h2>
+
+                <form action="เช็คสถานะ.html" method="POST" class="registration-form">
+                    
+                    <!-- เลือกคณะที่สมัคร -->
+                    <div class="form-group-select-custom">
+                        <label for="faculty">คณะที่เลือกสมัคร</label>
+                        <select id="faculty" name="faculty">
+                            <option value="" disabled selected>คณะที่เลือกสมัคร</option>
+                            <option value="fitm">คณะเทคโนโลยีและการจัดการอุตสาหกรรม (FITM)</option>
+                            <option value="fiet">คณะครุศาสตร์อุตสาหกรรม</option>
+                            <option value="eng">คณะวิศวกรรมศาสตร์</option>
+                        </select>
+                    </div>
+
+                    <!-- เลือกสาขาที่สมัคร -->
+                    <div class="form-group-select-custom">
+                        <label for="major">สาขาที่เลือกสมัคร</label>
+                        <select id="major" name="major">
+                            <option value="" disabled selected>สาขาที่เลือกสมัคร</option>
+                            <option value="iti">เทคโนโลยีสารสนเทศ (ITI)</option>
+                            <option value="inet">วิศวกรรมเครือข่ายและความมั่นคงปลอดภัยไซเบอร์ (INET)</option>
+                        </select>
+                    </div>
+
+                    <!-- ปุ่มลิงก์ดูข้อมูลคณะ/สาขา -->
+                    <div>
+                        <a href="ข้อมูลคณะ1.html" class="btn-faculty-info">
+                            ข้อมูลคณะ/สาขา ของ มจพ ปราจีน &rarr;
+                        </a>
+                    </div>
+
+                    <!-- ปุ่มนำทาง: ถัดไป (สีส้ม) และ ย้อนกลับ (สีเทา) ฝั่งซ้ายคู่กัน -->
+                    <div class="row-action-left">
+                        <a href="เช็คสถานะ.html" type="submit" class="btn-submit-orange">ถัดไป</a>
+                        <a href="ข้อมูลผู้ปกครอง.html" class="btn-back-gray">ย้อนกลับ</a>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

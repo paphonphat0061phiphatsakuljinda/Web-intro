@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+    margin: 0;
+    background-color: #FDE8D7;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+.faculty-footer {
+    background-color: #FDE8D7;
+    padding-top: 30px;
+}
+.back-btn-wrapper {
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+.btn-back-gray-pill {
+    display: inline-block;
+    background-color: #6D7375;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 22px;
+    border-radius: 8px;
+}
+.tabs-container {
+    padding-left: 50px;
+    display: flex;
+}
+.tabs-bar {
+    background-color: #FF914D;
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 0 45px 0 10px;
+    border-radius: 12px 12px 0 0;
+    height: 46px;
+    box-sizing: border-box;
+}
+.tab-btn {
+    background-color: #FFAF7B;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 18px;
+    border-radius: 8px 8px 0 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.tab-btn.active {
+    height: 68px;
+    font-weight: 600;
+}
+</style>
+</head>
+<body>
+<div class="faculty-footer">
+    <div class="back-btn-wrapper">
+        <a href="#" class="btn-back-gray-pill">กลับสู่หน้ากรอกข้อมูล</a>
+    </div>
+    <div class="tabs-container">
+        <div class="tabs-bar">
+            <a href="#" class="tab-btn">คณะเทคโนโลยีและการจัดการอุตสาหกรรม</a>
+            <a href="#" class="tab-btn">คณะบริหารธุรกิจและอุตสาหกรรมบริการ</a>
+            <a href="#" class="tab-btn active">คณะอุตสาหกรรมเกษตรดิจิทัล</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลผู้ปกครอง - ระบบรับสมัครนักศึกษาใหม่ มจพ.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ==================== HEADER (ส่วนหัวเว็บไซต์) ==================== -->
+        <header>
+            <img src="images/logo_kmutnb-(6).png" alt="โลโก้ มจพ." height="151px">
+            <h1>รับสมัคร นักศึกษาใหม่ มจพ.</h1>
+
+            <div class="FITM">
+                <img src="images/unnamed.png" alt="โลโก้ FITM" height="98px">
+            </div>
+        </header>
+
+        <!-- ==================== NAVIGATION (เมนูนำทาง) ==================== -->
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="ขั้นตอนการสมัคร.html">ขั้นตอนการสมัคร</a>
+            <a href="ติดต่อ.html">ติดต่อ</a>
+        </nav>
+
+        <!-- ==================== MAIN CONTENT (ข้อมูลผู้ปกครอง) ==================== -->
+        <main class="main-content">
+            
+            <!-- STEPPER (แถบแสดงขั้นตอน - ขั้นที่ 3) -->
+            <div class="lod--">
+                <div class="stepper">
+                    <div class="step completed">
+                        <div class="label">ข้อมูลส่วนตัว</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step completed">
+                        <div class="label">ข้อมูลสถานศึกษาเดิม</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step active">
+                        <div class="label">ข้อมูลผู้ปกครอง</div>
+                        <div class="circle"><img src="images/LOGO-KMUTNB.png" alt="โลโก้ขั้นตอน" width="50"></div>
+                    </div>
+                    <div class="step">
+                        <div class="label">ข้อมูลการสมัครเรียน</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step">
+                        <div class="label">เช็คสถานะ</div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM CONTAINER (กรอบแบบฟอร์มข้อมูลผู้ปกครอง) -->
+            <div class="form-container">
+                <h1>แบบฟอร์มการสมัครเรียน มจพ.</h1>
+                <h2>กรอกข้อมูล ผู้ปกครอง</h2>
+
+                <form action="ข้อมูลการสมัครเรียน.html" method="POST" enctype="multipart/form-data" class="registration-form">
+            
+                    <!-- ==================== โซนที่ 1: ข้อมูลบิดา ==================== -->
+                    <div class="parent-card">
+                        <h3 class="parent-card-title">บิดา</h3>
+                        
+                        <!-- แถวที่ 1: คำนำหน้า, ชื่อ, นามสกุล -->
+                        <div class="form-row row-name">
+                            <div class="form-group col-prefix">
+                                <label for="father-prefix">คำนำหน้า</label>
+                                <select id="father-prefix" name="father_prefix">
+                                    <option value="" disabled selected>คำนำหน้า</option>
+                                    <option value="mr">นาย</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-firstname">
+                                <label for="father-firstname">ชื่อ</label>
+                                <input type="text" id="father-firstname" name="father_firstname" placeholder="กรอกชื่อบิดา">
+                            </div>
+
+                            <div class="form-group col-lastname">
+                                <label for="father-lastname">นามสกุล</label>
+                                <input type="text" id="father-lastname" name="father_lastname" placeholder="กรอกนามสกุลบิดา">
+                            </div>
+                        </div>
+
+                        <!-- แถวที่ 2: บัตรประชาชน -->
+                        <div class="form-row row-citizen-id">
+                            <div class="form-group col-full">
+                                <label for="father-citizen-id">บัตรประชาชน</label>
+                                <input type="text" id="father-citizen-id" name="father_citizen_id" placeholder="กรอกเลขบัตรประชาชนบิดา 13 หลัก">
+                            </div>
+                        </div>
+
+                        <!-- แถวที่ 3: อาชีพ (177px), รายได้ (298px), เบอร์ (547px) -->
+                        <div class="form-row row-father-info">
+                            <div class="form-group col-occupation">
+                                <label for="father-occupation">อาชีพ</label>
+                                <input type="text" id="father-occupation" name="father_occupation" placeholder="กรอกอาชีพ">
+                            </div>
+
+                            <div class="form-group col-income">
+                                <label for="father-income">รายได้</label>
+                                <input type="text" id="father-income" name="father_income" placeholder="กรอกรายได้ต่อเดือน">
+                            </div>
+
+                            <div class="form-group col-phone-parent">
+                                <label for="father-phone">เบอร์</label>
+                                <input type="tel" id="father-phone" name="father_phone" placeholder="กรอกเบอร์โทรศัพท์">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== โซนที่ 2: ข้อมูลมารดา ==================== -->
+                    <div class="parent-card">
+                        <h3 class="parent-card-title">มารดา</h3>
+                        
+                        <!-- แถวที่ 1: คำนำหน้า, ชื่อ, นามสกุล -->
+                        <div class="form-row row-name">
+                            <div class="form-group col-prefix">
+                                <label for="mother-prefix">คำนำหน้า</label>
+                                <select id="mother-prefix" name="mother_prefix">
+                                    <option value="" disabled selected>คำนำหน้า</option>
+                                    <option value="mrs">นาง</option>
+                                    <option value="miss">นางสาว</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-firstname">
+                                <label for="mother-firstname">ชื่อ</label>
+                                <input type="text" id="mother-firstname" name="mother_firstname" placeholder="กรอกชื่อมารดา">
+                            </div>
+
+                            <div class="form-group col-lastname">
+                                <label for="mother-lastname">นามสกุล</label>
+                                <input type="text" id="mother-lastname" name="mother_lastname" placeholder="กรอกนามสกุลมารดา">
+                            </div>
+                        </div>
+
+                        <!-- แถวที่ 2: บัตรประชาชน -->
+                        <div class="form-row row-citizen-id">
+                            <div class="form-group col-full">
+                                <label for="mother-citizen-id">บัตรประชาชน</label>
+                                <input type="text" id="mother-citizen-id" name="mother_citizen_id" placeholder="กรอกเลขบัตรประชาชนมารดา 13 หลัก">
+                            </div>
+                        </div>
+
+                        <!-- แถวที่ 3: อาชีพ (177px), รายได้ (298px), เบอร์ (547px) -->
+                        <div class="form-row row-mother-info">
+                            <div class="form-group col-occupation">
+                                <label for="mother-occupation">อาชีพ</label>
+                                <input type="text" id="mother-occupation" name="mother_occupation" placeholder="กรอกอาชีพ">
+                            </div>
+
+                            <div class="form-group col-income">
+                                <label for="mother-income">รายได้</label>
+                                <input type="text" id="mother-income" name="mother_income" placeholder="กรอกรายได้ต่อเดือน">
+                            </div>
+
+                            <div class="form-group col-phone-parent">
+                                <label for="mother-phone">เบอร์</label>
+                                <input type="tel" id="mother-phone" name="mother_phone" placeholder="กรอกเบอร์โทรศัพท์">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ปุ่มนำทาง: ถัดไป (สีส้ม) และ ย้อนกลับ (สีเทา) ฝั่งซ้ายคู่กัน -->
+                    <div class="row-action-left">
+                        <a href="ข้อมูลการสมัครเรียน.html" type="submit" class="btn-submit-orange">ถัดไป</a>
+                        <a href="ข้อมูลสถานศึกษาเดิม.html" class="btn-back-gray">ย้อนกลับ</a>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เช็คสถานะ - ระบบรับสมัครนักศึกษาใหม่ มจพ.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ==================== HEADER (ส่วนหัวเว็บไซต์) ==================== -->
+        <header>
+            <img src="images/logo_kmutnb-(6).png" alt="โลโก้ มจพ." height="151px">
+            <h1>รับสมัคร นักศึกษาใหม่ มจพ.</h1>
+
+            <div class="FITM">
+                <img src="images/unnamed.png" alt="โลโก้ FITM" height="98px">
+            </div>
+        </header>
+
+        <!-- ==================== NAVIGATION (เมนูนำทาง) ==================== -->
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="ขั้นตอนการสมัคร.html">ขั้นตอนการสมัคร</a>
+            <a href="ติดต่อ.html">ติดต่อ</a>
+        </nav>
+
+        <!-- ==================== MAIN CONTENT (เช็คสถานะการสมัคร) ==================== -->
+        <main class="main-content">
+            
+            <!-- STEPPER (แถบแสดงขั้นตอน - ขั้นที่ 5 ครบทุกขั้นตอน) -->
+            <div class="lod--">
+                <div class="stepper">
+                    <div class="step completed">
+                        <div class="label">ข้อมูลส่วนตัว</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step completed">
+                        <div class="label">ข้อมูลสถานศึกษาเดิม</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step completed">
+                        <div class="label">ข้อมูลผู้ปกครอง</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step completed">
+                        <div class="label">ข้อมูลการสมัครเรียน</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step active">
+                        <div class="label">เช็คสถานะ</div>
+                        <div class="circle"><img src="images/LOGO-KMUTNB.png" alt="โลโก้ขั้นตอน" width="50"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINER แสดงสถานะ -->
+                <div class="form-container">
+                    <h1>การสมัครเรียน มจพ.</h1>
+                    <div class="status-success-text">ส่งเอกสารเรียบร้อย</div>
+
+                    <!-- การ์ดแสดงสถานะปัจบันของการสมัคร -->
+                    <div class="status-card">
+                        <h2>สถานะของคุณ</h2>
+                        <div class="status-msg">สถานศึกษากำลังตรวจสอบเอกสาร</div>
+
+                        <!-- ตราสัญลักษณ์ มจพ. -->
+                        <img src="images/logo_kmutnb-(6).png" alt="ตรา มจพ." class="status-seal-img">
+
+                        <!-- ปุ่มแก้ไขข้อมูล (ฝั่งซ้ายล่างของการ์ด) -->
+                        <div class="status-card-footer">
+                            <a href="ข้อมูลส่วนตัว.html" class="btn-edit-info">แก้ไขข้อมูล</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

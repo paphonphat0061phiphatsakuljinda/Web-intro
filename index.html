@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก - ระบบรับสมัครนักศึกษาใหม่ มจพ.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ==================== HEADER (ส่วนหัวเว็บไซต์) ==================== -->
+        <header>
+            <img src="images/logo_kmutnb-(6).png" alt="โลโก้ มจพ." height="151px">
+            <h1>รับสมัคร นักศึกษาใหม่ มจพ.</h1>
+
+            <div class="FITM">
+                <img src="images/unnamed.png" alt="โลโก้ FITM" height="98px">
+            </div>
+        </header>
+
+        <!-- ==================== NAVIGATION (เมนูนำทาง) ==================== -->
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="ขั้นตอนการสมัคร.html">ขั้นตอนการสมัคร</a>
+            <a href="ติดต่อ.html">ติดต่อ</a>
+        </nav>
+
+        <!-- ==================== MAIN CONTENT (เข้าสู่ระบบ) ==================== -->
+        <main class="home">
+            <div class="login-cart">
+                <!-- โลโก้ในแบบฟอร์มเข้าสู่ระบบ -->
+                <img src="images/logokmutnbfinal.png" alt="ตรา มจพ." height="95">
+
+                <!-- ฟอร์มเข้าสู่ระบบ -->
+                <form action="ข้อมูลส่วนตัว.html" method="GET" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                    <!-- ช่องกรอกเลขบัตรประชาชน -->
+                    <div class="lable-input">
+                        <label for="citizen-id">เลขบัตรประชาชน</label>
+                        <input type="text" id="citizen-id" name="citizen_id" placeholder="กรอกเลขบัตรประชาชน">
+                    </div>
+                    
+                    <!-- ช่องกรอกรหัสผ่าน -->
+                    <div class="lable-input">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="กรอกรหัสผ่าน">
+                        <a href="ติดต่อ.html">ติดต่อเจ้าหน้าที่</a>
+                    </div>
+
+                    <!-- ปุ่มกดเข้าสู่ระบบ -->
+                    <button type="submit" class="btn btn-orange" style="margin-top: 15px;">เข้าสู่ระบบ</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

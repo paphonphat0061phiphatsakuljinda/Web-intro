@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลสถานศึกษาเดิม - ระบบรับสมัครนักศึกษาใหม่ มจพ.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ==================== HEADER (ส่วนหัวเว็บไซต์) ==================== -->
+        <header>
+            <img src="images/logo_kmutnb-(6).png" alt="โลโก้ มจพ." height="151px">
+            <h1>รับสมัคร นักศึกษาใหม่ มจพ.</h1>
+
+            <div class="FITM">
+                <img src="images/unnamed.png" alt="โลโก้ FITM" height="98px">
+            </div>
+        </header>
+
+        <!-- ==================== NAVIGATION (เมนูนำทาง) ==================== -->
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="ขั้นตอนการสมัคร.html">ขั้นตอนการสมัคร</a>
+            <a href="ติดต่อ.html">ติดต่อ</a>
+        </nav>
+
+        <!-- ==================== MAIN CONTENT (ข้อมูลสถานศึกษาเดิม) ==================== -->
+        <main class="main-content">
+            
+            <!-- STEPPER (แถบแสดงขั้นตอน - ขั้นที่ 2) -->
+            <div class="lod--">
+                <div class="stepper">
+                    <div class="step completed">
+                        <div class="label">ข้อมูลส่วนตัว</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step active">
+                        <div class="label">ข้อมูลสถานศึกษาเดิม</div>
+                        <div class="circle"><img src="images/LOGO-KMUTNB.png" alt="โลโก้ขั้นตอน" width="50"></div>
+                    </div>
+                    <div class="step">
+                        <div class="label">ข้อมูลผู้ปกครอง</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step">
+                        <div class="label">ข้อมูลการสมัครเรียน</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="step">
+                        <div class="label">เช็คสถานะ</div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM CONTAINER (กรอบแบบฟอร์มข้อมูลสถานศึกษาเดิม) -->
+            <div class="form-container">
+                <h1>แบบฟอร์มการสมัครเรียน มจพ.</h1>
+                <h2>กรอกข้อมูล สถานศึกษาเดิม</h2>
+
+                <form action="ข้อมูลผู้ปกครอง.html" method="POST" enctype="multipart/form-data" class="registration-form">
+            
+                    <!-- แถวที่ 1: ชื่อสถานศึกษาเดิม (635px), แผนการเรียน (300px), GPAX (134px) -->
+                    <div class="form-row row-school-info">
+                        <div class="form-group col-school-name">
+                            <label for="school-name">ชื่อสถานศึกษาเดิม</label>
+                            <input type="text" id="school-name" name="school_name" placeholder="กรอกชื่อโรงเรียน/สถาบันเดิม">
+                        </div>
+
+                        <div class="form-group col-plan">
+                            <label for="plan">แผนการเรียน</label>
+                            <input type="text" id="plan" name="plan" placeholder="เช่น วิทย์-คณิต / ศิลป์-คำนวณ">
+                        </div>
+
+                        <div class="form-group col-gpax">
+                            <label for="gpax">GPAX</label>
+                            <input type="text" id="gpax" name="gpax" placeholder="เช่น 3.50">
+                        </div>
+                    </div>
+
+                    <!-- แถวที่ 2: แนบรูป ใบ ปพ จบ -->
+                    <div class="form-row row-upload">
+                        <label style="font-size: 14px; margin-bottom: 6px; font-weight: 500;">แนบรูป ใบ ปพ จบ</label>
+                        
+                        <!-- ปุ่มเลือกไฟล์แนบ -->
+                        <div class="upload-controls">
+                            <label class="upload-label btn-orange-file" for="pp-img">แนบไฟล์</label>
+                            <input type="file" id="pp-img" name="pp_img" accept=".png, .jpg" class="file-input">
+                             <div class="badge-example">
+                                <a href="ตัวอย่างไฟล์ ปพ.html" type="submit" class="upload-label">ตัวอย่างไฟล์ที่ถูกต้อง</a>
+                            </div>
+                        </div>
+
+                        <!-- ตัวอย่างรูปภาพแนบ 2 อัน (ด้านหน้า & ด้านหลัง) -->
+                        <div class="preview-container">
+                            <div class="preview-box-item">
+                                <div class="image-preview">ตัวอย่างไฟล์<br>ด้านหน้า</div>
+                            </div>
+                            <div class="preview-box-item">
+                                <div class="image-preview">ตัวอย่างไฟล์<br>ด้านหลัง</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ปุ่มนำทาง: ถัดไป (สีส้ม) และ ย้อนกลับ (สีเทา) ฝั่งซ้ายคู่กัน -->
+                    <div class="row-action-left">
+                        <a href="ข้อมูลผู้ปกครอง.html" type="submit" class="btn-submit-orange">ถัดไป</a>
+                        <a href="ข้อมูลส่วนตัว.html" class="btn-back-gray">ย้อนกลับ</a>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
