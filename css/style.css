@@ -819,7 +819,7 @@ nav a:hover {
 
 /* ---------- พื้นที่หลัก ---------- */
 .faculty-content {
-    padding: 30px 50px;
+    padding: 16px 40px;
     background-color: #FDE8D7;
     flex: 1;
 }
@@ -828,29 +828,79 @@ nav a:hover {
 .faculty-grid {
     display: flex;
     gap: 20px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .faculty-grid > .faculty-card {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .faculty-right-col {
+    flex: 1.25;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faculty-sub-row {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.faculty-sub-row > .faculty-card {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 /* ---------- คอลัมน์เดียว (ข้อมูลคณะ 2, 3) ---------- */
 .faculty-single {
-    max-width: 700px;
-    margin: 0 auto;
+    width: 85%;
+    max-width: 1000px;
+    margin: 55px auto 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
+}
+
+.faculty-single .faculty-card {
+    padding: 16px 32px;
+    border-radius: 14px;
+}
+
+.faculty-single .faculty-card h2 {
+    font-size: 19px;
+    margin: 0 0 6px 0;
+}
+
+.faculty-single .degree-title {
+    font-size: 15.5px;
+    margin: 8px 0 4px;
+}
+
+.faculty-single .program-name {
+    font-size: 14px;
+    margin: 7px 0 3px;
+    line-height: 1.4;
+}
+
+.faculty-single .branch-list {
+    font-size: 13.5px;
+    line-height: 1.65;
+    padding-left: 22px;
+    margin: 3px 0 6px;
+}
+
+.faculty-single .sub-branch-list {
+    font-size: 13px;
+    line-height: 1.55;
+    padding-left: 18px;
+    margin: 3px 0;
 }
 
 /* ---------- การ์ดข้อมูลคณะ ---------- */
@@ -858,13 +908,22 @@ nav a:hover {
     background: #ffffff;
     border: 2px solid #e0e0e0;
     border-radius: 12px;
-    padding: 25px 30px;
+    padding: 20px 24px;
+    box-sizing: border-box;
+}
+
+.faculty-card-compact {
+    padding: 16px 20px;
+}
+
+.faculty-card-compact .duration-badge {
+    font-size: 26px;
 }
 
 .faculty-card h2 {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 700;
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
     color: #333333;
 }
 
@@ -873,8 +932,8 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 5px;
+    gap: 12px;
+    margin-bottom: 4px;
 }
 
 .faculty-card-header h2 {
@@ -884,7 +943,7 @@ nav a:hover {
 /* ---------- ป้ายจำนวนปี ---------- */
 .duration-badge {
     color: #ED6B33;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
     white-space: nowrap;
     line-height: 1;
@@ -892,66 +951,96 @@ nav a:hover {
 
 /* ---------- หัวข้อระดับปริญญา ---------- */
 .degree-title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
-    margin: 12px 0 5px;
+    margin: 8px 0 4px;
     color: #333333;
 }
 
 .degree-subtitle {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 /* ---------- ชื่อหลักสูตร ---------- */
 .program-name {
     color: #ED6B33;
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 500;
-    margin: 10px 0 5px;
-    line-height: 1.5;
+    margin: 8px 0 4px;
+    line-height: 1.45;
 }
 
 /* ---------- รายชื่อสาขาวิชา ---------- */
 .branch-list {
     list-style-type: disc;
-    padding-left: 25px;
-    margin: 5px 0 10px;
+    padding-left: 20px;
+    margin: 4px 0 8px;
     font-size: 13px;
-    line-height: 1.9;
+    line-height: 1.7;
     color: #333333;
 }
 
 /* ---------- รายชื่อวิชา (ย่อย) ---------- */
 .sub-branch-list {
     list-style-type: '- ';
-    padding-left: 20px;
+    padding-left: 18px;
     margin: 4px 0;
     font-size: 13px;
-    line-height: 1.8;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .faculty-grid {
+        flex-direction: column;
+    }
+    .faculty-sub-row {
+        flex-direction: column;
+    }
+    .faculty-single {
+        width: 92%;
+        margin: 20px auto 0;
+    }
+    .faculty-single .faculty-card {
+        padding: 22px 24px;
+    }
+    .faculty-tabs-bar {
+        overflow-x: auto;
+        max-width: 100%;
+        padding: 0 15px 0 8px;
+    }
+    .faculty-tab {
+        font-size: 14px;
+        padding: 0 14px;
+        height: 44px;
+    }
+    .faculty-tab.active {
+        font-size: 14.5px;
+        height: 60px;
+    }
 }
 
 /* ---------- ส่วนท้าย (Footer: ปุ่มกลับ + แท็บคณะ) ---------- */
 .faculty-footer {
     background-color: #FDE8D7;
-    padding-top: 15px;
+    padding-top: 10px;
     margin-top: auto;
 }
 
 /* ปุ่มกลับสู่หน้ากรอกข้อมูล (ติดขอบซ้ายจอ) */
 .footer-back-wrap {
-    margin-bottom: 25px;
+    margin-bottom: 12px;
 }
 
 .btn-back-side {
     background-color: #6D7375;
     color: #FFFFFF;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     font-family: inherit;
-    padding: 10px 24px 10px 18px;
-    border-radius: 0 12px 12px 0;
+    padding: 13px 32px 13px 24px;
+    border-radius: 0 16px 16px 0;
     display: inline-block;
     transition: background-color 0.2s;
 }
@@ -970,10 +1059,10 @@ nav a:hover {
     background-color: #FF914D;
     display: inline-flex;
     align-items: flex-end;
-    gap: 6px;
-    height: 50px;
-    padding: 0 45px 0 8px;
-    border-radius: 14px 14px 0 0;
+    gap: 8px;
+    height: 60px;
+    padding: 0 45px 0 10px;
+    border-radius: 16px 16px 0 0;
     box-sizing: border-box;
 }
 
@@ -981,19 +1070,19 @@ nav a:hover {
     background-color: #FFAE77;
     color: #000000;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 500;
     font-family: inherit;
-    height: 42px;
-    padding: 0 20px;
-    border-radius: 8px 8px 0 0;
+    height: 52px;
+    padding: 0 25px;
+    border-radius: 10px 10px 0 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
     box-sizing: border-box;
     flex-shrink: 0;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, height 0.2s;
 }
 
 .faculty-tab:hover {
@@ -1002,9 +1091,10 @@ nav a:hover {
 
 /* แท็บคณะที่เปิดอยู่ */
 .faculty-tab.active {
-    height: 74px;
+    height: 86px;
     background-color: #FFAE77;
     font-weight: 600;
+    font-size: 17.5px;
 }
 
 /* ---------- ลิงก์เข้าสู่ระบบใน nav ---------- */
